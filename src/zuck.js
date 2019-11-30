@@ -1439,7 +1439,7 @@ module.exports = (window => {
     return timelineItem;
   };
 
-  ZuckJS.buildStoryItem = (id, type, length, src, preview, link, linkText, seen, time) => {
+  ZuckJS.buildStoryItem = (id, type, length, src, preview, link, linkText, seen, time, linkId) => {
     return {
       id,
       type,
@@ -1449,7 +1449,8 @@ module.exports = (window => {
       link,
       linkText,
       seen,
-      time
+      time,
+      linkId
     };
   };
 
