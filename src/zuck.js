@@ -244,8 +244,12 @@ module.exports = (window => {
       const day = dateObj.getDate();
       const month = dateObj.getMonth();
       const year = dateObj.getFullYear();
-
-      return `${day}/${month + 1}/${year}`;
+      // return `${day}/${month + 1}/${year}`;
+      if (day && month && year) {
+        const shamsi = new Date(year, month, day).toLocaleDateString('fa-Ir');
+        return shamsi;
+      }
+      return '';
     };
 
     /* options */
